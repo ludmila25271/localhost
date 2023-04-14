@@ -1,0 +1,288 @@
+/*СТИЛИ ФОНА*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: gainsboro;
+	font-family: OpenSans;
+	font-size: 14pt;
+}
+
+/*СТИЛИ ШРИФТОВ*/
+@font-face {
+	font-family: OpenSans;
+	src: url("fonts/falling-sky-font/FallingSkySemibold-Bn7B.otf");
+}
+h1,h2,h3,h4,p {
+	padding: 5px 0;
+}
+.center {
+	text-align: center;
+	font-size: 50px;
+}
+hr {
+	margin: 10px 0;
+	border: solid 1px black;
+}
+a {
+	color: black;
+	cursor:pointer;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+/*СТИЛИ ФОТОГРАФИЙ*/
+img {
+	max-width:100%;
+	object-fit: cover;
+}
+
+/*СТИЛИ ПОЛЬЗОВАТЕЛЬСКИЕ ДЛЯ ТЕКСТА*/
+.text-left {
+	text-align: left !important;
+}
+.text-center {
+	text-align: center !important;
+}
+.text-right {
+	text-align: right !important;
+}
+.text-justify {
+	text-align: justify !important;
+}
+.text-small {
+	font-size: 12pt;
+	color: gray;
+}
+
+/*СТИЛИ ФОРМ*/
+form {
+	width: 60%;
+	margin: 0 auto;
+}
+form.w100 {
+	width: 100%;
+}
+form div.part {
+	display: flex;
+	align-items: center;
+}
+form div.part > *:nth-child(1) {
+	margin-right: 10px;
+}
+
+/*СТИЛИ КНОПОК, СПИСКОВ И ПОДСКАЗОК*/
+input:invalid:not(:placeholder-shown) {border-color: red;}
+input:valid:not(:placeholder-shown) {border-color: green;}
+input,select,textarea,button {
+	width: 100%;
+	height: 50px;
+	outline: none;
+	margin: 10px 0;
+	transition: .2s;
+	font-size: 14pt;
+	padding-left: 10px;
+	border-radius: 5px;
+	font-family: OpenSans;
+	border: solid 1px black;
+}
+input[type=file] {
+	padding: 0;
+	border:  none;
+	height: 30px;
+}
+input[type=checkbox] {
+	width: 25px;
+	height: 25px;
+	margin-right: 10px;
+}
+textarea {
+	padding: 10px;
+	height: 100px;
+}
+button {
+	padding: 0;
+	cursor: pointer;
+	border: none;
+	color: black;
+	background-color:beige;
+	border: solid 1px black;
+}
+button:hover {
+	background-color:rgb(252, 197, 116);
+}
+button:focus {
+	background-color:rgb(247, 168, 51);
+}
+button:active {
+	background-color:#000;
+}
+
+/*СТИЛИ БЛОКОВ*/
+div.content {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+div.message {
+	font-size: 20pt;
+	color:rgb(255, 0, 0);
+	text-align:center;
+	margin: 40px 0;
+}
+.head {
+	border-bottom: solid 2px black;
+	padding: 10px 0;
+	margin-bottom: 20px;
+}
+div.head {
+	border-bottom: solid 2px black;
+	padding: 20px 0;
+	margin: 40px 0 30px;
+	font-size: 20pt;
+	text-align: center;
+}
+div.wrap {
+	padding: 20px;
+	margin: 0 auto;
+	border-radius: 5px;
+	background-color: white;
+	box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+div.row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+div.row.at {
+	align-items: flex-start;
+}
+div.col {
+	width: 32%;
+	padding: 20px;
+	transition: .2s;
+	text-align: center;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	background-color: white;
+	border: solid 1px rgba(0,0,0,0.3);
+	box-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+div.col img {
+	width: 100%;
+	height: 250px;
+	margin-bottom: 10px;
+}
+
+/*СТИЛИ ШАПКИ*/
+header {
+	background-color: bisque;
+	border-bottom: solid 3px black;
+}
+header div.top {
+	padding: 40px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: bisque;
+	background-size: 100%;
+	background-attachment: fixed;
+}
+header div.top a:hover {
+	text-decoration: none;
+}
+header div.top img {
+	width:70px;
+	height:50px;
+	margin-right:20px;
+	object-fit: inherit;
+}
+
+/*СТИЛИ МЕНЮ*/
+header ul, footer ul  {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+header ul li, footer ul li {
+	width: 100%;
+	padding: 20px 0;
+	transition: .2s;
+	text-align: center;
+}
+header button, footer button {
+	max-width: 60%;
+	margin: 0;
+}
+
+/*СТИЛИ ЭЛЕМЕНТОВ ИСХОДЯ ИЗ МИНИМАЛЬНОЙ ВЫСОТЫ*/
+main {
+	min-height: calc(100vh - 400px);
+}
+
+/*СТИЛИ ПРОДУКТА*/
+main div.product {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+main div.product > div {
+	width: 49%;
+	flex-shrink: 0;
+}
+main div.product div.image {
+	text-align: center;
+}
+main div.product img {
+	height: 300px;
+}
+
+/*СТИЛИ ПОДВАЛА*/
+footer {
+	margin-top: 40px;
+	background-color: bisque;
+	border-top: solid 3px black;
+}
+
+/*SLIDER*/
+div#slider {
+	position: relative;
+	padding: 10px 5px;
+	overflow: hidden; 
+}
+div#slider div.slides {
+	position: relative;
+	display: flex;
+	transition: .4s;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	left: 0;
+}
+div#slider div.slides div.slide {
+	flex-shrink: 0;
+	text-align:center;
+	margin-right: 20px;
+	margin-bottom: 0;
+}
+div.slide img {
+	margin-bottom: 10px;
+}
+
+/*FILTRATION*/
+span {
+	cursor: pointer;
+}
+span:hover {
+	text-decoration: underline;
+}
+select#category {
+	max-width: 30%;
+}
